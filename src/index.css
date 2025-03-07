@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'StarCartoon';
+  src: url('/src/fonts/StarCartoon.ttf') format('truetype'); /* Chemin vers le fichier TTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'StarCartoon', sans-serif; /* Applique la police à tout le body */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.trait-option {
+  transition: all 0.2s ease-in-out;
+}
+
+.trait-option:hover {
+  transform: scale(1.05);
+}
+
+.trait-option.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
